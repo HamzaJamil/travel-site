@@ -1,6 +1,6 @@
 .wrapper {
     padding: 0 15px;
-    max-width: 1230px;
+    max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
 
@@ -24,22 +24,40 @@
 
 .row {
     @include clearfix;
-    margin-right: -50px;
+    
+    &--gutters{
+        margin-right: -50px;
 
-    &>div {
+    }
+
+    &--gutters-large{
+        margin-right: -100px;
+    }
+
+    &--gutters > div {
         padding-right: 50px;
+    }
+
+    &--gutters-large > div{
+        padding-right: 100px;
     }
     
     .col-medium-4 {
         @include respond(atMedium){
             float: left;
-            width: 37%;
+            width: 33.33%;
         }
         
         &--larger {
             @include respond(atMedium) {
-                width: 33.33%;
+                width: 37%;
             }
+        }
+    }
+    .col-medium-6{
+        @include respond(atMedium) {
+            float: left;
+            width: 50%;
         }
     }
     
