@@ -1,0 +1,21 @@
+.btn{
+    color: $colorWhite;
+    background-color: $mainBlue;
+    padding: .75rem 1.2rem;
+    display: inline-block;
+    text-decoration: none;
+
+    &--orange{
+        background-color: $mainOrange;
+    }
+
+    &--large{
+        padding: 1.1rem 1.9rem;
+        
+        @include respond(atSmall){
+            font-size: 1.25rem;
+            
+        }
+    }
+
+}

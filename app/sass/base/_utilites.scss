@@ -1,0 +1,20 @@
+.u-text-center{
+    text-align: center;
+}
+.u-vertical-margin-zero{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.u-margin-top-zero{
+    margin-top: 0;
+}
+.u-margin-bottom-zero{
+    margin-bottom: 0;
+}
+.u-margin-until-medium{
+    margin-bottom: 1rem;
+
+    @include respond(atMedium){
+        margin-bottom: 0;
+    }
+}

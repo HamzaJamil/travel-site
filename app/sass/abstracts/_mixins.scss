@@ -1,0 +1,58 @@
+// clearfix
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Media query manager
+
+0 - 530px ----- [is where our normal styles apply][phone]
+530px - 800px ----- [tablet-portrait]
+800px - 1200px ----- [tablet-landscape]
+1200px - 1800px ----- [Laptop/Desktop]
+1800px+ ----- [big desktop]
+
+$breakpoint argument options:
+    atSmall = 530px
+    atMedium = 800px
+    atLarge = 1200px
+
+ORDER: Base + Typography > General Layout + Grid > Page Layout > Component
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==atSmall {
+        @media (min-width: 530px) {
+            @content
+        }; //530px               
+    }
+
+    @if $breakpoint==atMedium {
+        @media (min-width: 800px) {
+            @content
+        }; //800px
+    }
+
+    @if $breakpoint==atLarge {
+        @media (min-width: 1200px) {
+            @content
+        }; //1200px
+    }
+
+    @if $breakpoint==bigDesktop {
+        @media (min-width: 1800px) {
+            @content
+        }; //1800px
+    }
+}

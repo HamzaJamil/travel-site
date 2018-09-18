@@ -1,0 +1,81 @@
+.wrapper {
+    padding: 0 15px;
+    max-width: 1230px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    &--medium {
+        max-width: 780px;
+    }
+
+    &--b-margin{
+        margin-bottom: 1rem;
+        @include respond(atMedium){
+            margin-bottom: 3.5rem;
+        }
+    }
+
+    .wrapper {
+        padding: 0;
+    }
+
+}
+
+
+.row {
+    @include clearfix;
+    margin-right: -50px;
+
+    &>div {
+        padding-right: 50px;
+    }
+    
+    .col-medium-4 {
+        @include respond(atMedium){
+            float: left;
+            width: 37%;
+        }
+        
+        &--larger {
+            @include respond(atMedium) {
+                width: 33.33%;
+            }
+        }
+    }
+    
+
+    .col-medium-8 {        
+        @include respond(atMedium) {
+            float: left;
+            width: 66.66%;
+        }
+
+        &--smaller{
+            @include respond(atMedium) {
+                width: 63%;
+            }
+        }
+    }
+}
+
+.page-section {
+    padding: 2.5rem 0;
+
+
+    @include respond(atSmall) {
+        padding: 3.2rem 0;
+    }
+
+    @include respond(atMedium) {
+        padding: 3.8rem 0;
+    }
+
+    @include respond(atLarge) {
+        padding: 4.5rem 0;
+    }
+
+    &--blue {
+        background-color: $mainBlue;
+        color: #ffffff;
+    }
+}

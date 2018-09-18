@@ -1,0 +1,15 @@
+.generic-content-container{
+
+    p{
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 1.8rem 0;
+
+        @include respond(atsmall){
+            font-size: 1.125rem;
+        }
+    }
+    p a{
+        font-weight: 700;       
+    }
+}
