@@ -1,0 +1,17 @@
+.site-footer{
+    background-color: $mainBlue;
+    color: $colorWhite;
+
+    &__text{
+        font-weight: 300;
+        display: block;
+        margin-bottom: 1rem;
+
+        @include respond(atMedium){
+            display: inline;
+            margin-bottom: 0;
+            margin-right: .5rem;
+
+        }
+    }
+}
