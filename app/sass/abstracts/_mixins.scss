@@ -45,7 +45,7 @@ ORDER: Base + Typography > General Layout + Grid > Page Layout > Component
     }
 
     @if $breakpoint==atLarge {
-        @media (min-width: 1200px) {
+        @media (min-width: 1010px) {
             @content
         }; //1200px
     }

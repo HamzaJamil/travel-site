@@ -1,0 +1,40 @@
+.testimonial{
+    background-color: rgba($colorWhite, .8);
+    padding: 0 18px 1px 18px;
+    border-radius: 3px;   
+    margin-bottom: 100px;
+
+    @include respond(atLarge){
+        margin-bottom: 40px;
+        padding: 0 1.5rem 1px 1.5rem;
+    }    
+
+    &__icon{
+        margin: 0 auto -80px;
+        border-radius: 50%;
+        position: relative;
+        top: -80px;
+        width: 160px;
+        height: 160px;
+        overflow: hidden;
+        border: 10px solid rgba($colorWhite, .8);
+
+    }
+    &__title{
+        text-align: center;
+        color: $mainBlue;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin: .5rem 0;
+    }
+
+    &__subtitle{
+        font-size: 0.96rem;
+        font-weight: 500;
+        text-align: center;
+        color: $mainOrange;
+        margin: 0 0 1rem;
+
+
+    }
+}
