@@ -47,11 +47,16 @@
             float: left;
             width: 33.33%;
         }
-        
         &--larger {
             @include respond(atMedium) {
                 width: 37%;
             }
+        }
+    }
+    .col-large-4 {
+        @include respond(atLarge) {
+            float: left;
+            width: 33.33%;
         }
     }
     .col-medium-6{
@@ -74,7 +79,22 @@
             }
         }
     }
+    /* Equal height at medium */
+    &--same-height-at-medium{
+        @include respond(atLarge){
+            display: flex;
+        }
+
+        & > div{
+
+            @include respond(atLarge){
+                display: flex;
+                float: none;
+            }
+        }
+    }
 }
+
 
 .page-section {
     padding: 2.5rem 0;
@@ -95,5 +115,15 @@
     &--blue {
         background-color: $mainBlue;
         color: #ffffff;
+    }
+
+    &--bg{
+
+        background-color: #e0e6ef;
+
+        @include respond(atLarge){
+            background: url(../images/testimonials-bg.jpg) no-repeat top center;
+            background-size: cover;
+        }
     }
 }

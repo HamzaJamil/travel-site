@@ -56,14 +56,21 @@ strong {
         font-size: 3.75rem;
     }
 
+    &--blue{
+        color: $mainBlue;
+    }
+
     &__icon{
         margin: 0 auto 0.5rem;        
 
         @include respond(atMedium){
+            position: relative;
+            top: 7px;
             display: inline-block;
             margin: 0 0.5rem 0 0;            
         }
     }
+
 
     strong{
         font-weight: 500;
