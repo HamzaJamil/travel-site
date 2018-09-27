@@ -645,7 +645,8 @@ strong {
     background-color: #fff;
     position: absolute;
     top: 10px;
-    right: 10px; }
+    right: 10px;
+    cursor: pointer; }
     @media (min-width: 800px) {
       .header__menu-icon {
         display: none; } }
@@ -654,6 +655,8 @@ strong {
     @media (min-width: 800px) {
       .header__content-menu {
         display: block; } }
+    .header__content-menu--visible {
+      display: block; }
   .header___btn-container {
     float: right; }
   .header .primary-nav--pull-right {

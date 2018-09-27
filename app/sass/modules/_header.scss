@@ -1,16 +1,16 @@
-.header{
+.header {
     position: absolute;
     top: 0;
     z-index: 2;
     width: 100%;
     padding: 10px 0;
-    
-    @include respond(atMedium){
-        background-color: rgba($mainBlue, 0.3);        
+
+    @include respond(atMedium) {
+        background-color: rgba($mainBlue, 0.3);
     }
 
     // header logo
-    &__logo{
+    &__logo {
         background-color: $mainBlue;
         position: absolute;
         top: 0;
@@ -19,30 +19,37 @@
         transform: translateX(-50%) scale(.8);
         transform-origin: 50% 0;
 
-         @include respond(atMedium){
-             left: auto;
-             transform: translateX(0) scale(1);
-            
-         }
+        @include respond(atMedium) {
+            left: auto;
+            transform: translateX(0) scale(1);
+
+        }
     }
+
     // header-menu-icon
-    &__menu-icon{
+    &__menu-icon {
         width: 20px;
         height: 20px;
         background-color: $colorWhite;
         position: absolute;
         top: 10px;
         right: 10px;
+        cursor: pointer;
 
-        @include respond(atMedium){
+        @include respond(atMedium) {
             display: none;
         }
     }
+
     // header-content-menu
-    &__content-menu{
+    &__content-menu {
         display: none;
 
-        @include respond(atMedium){
+        @include respond(atMedium) {
+            display: block;
+        }
+
+        &--visible {
             display: block;
         }
     }
@@ -54,24 +61,25 @@
     }
 
     // primary-nav
-    .primary-nav{
+    .primary-nav {
 
-        &--pull-right{
+        &--pull-right {
             float: right;
         }
 
-        ul{
+        ul {
             padding: 0;
             margin: 0;
-            @include clearfix;            
+            @include clearfix;
         }
 
-        li{
+        li {
             list-style: none;
             float: left;
             padding-right: 1rem;
         }
-        a{
+
+        a {
             color: $colorWhite;
             text-decoration: none;
             font-weight: 300;
