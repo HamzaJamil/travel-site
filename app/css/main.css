@@ -753,3 +753,9 @@ strong {
           font-size: 1rem;
           margin: 12px 0;
           background-color: transparent; } }
+
+.reveal-item {
+  opacity: 0;
+  transition: all .2s ease-out; }
+  .reveal-item--visible {
+    opacity: 1; }

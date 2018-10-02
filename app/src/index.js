@@ -1,6 +1,7 @@
 import MobileMenu from './modules/MobileMenu'
+import RevealOnScroll from './modules/RevealOnScroll'
 
 
-console.log('this is index.js module of me')
 
 var mobileMenu = new MobileMenu()
+var revealOnScroll = new RevealOnScroll()
