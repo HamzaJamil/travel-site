@@ -1,4 +1,8 @@
 var path = require('path');
+// var autoprefixer = require('autoprefixer');
+// var webpack = require('webpack');
+var MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 
 module.exports = {
     entry: ['./app/src/index.js'],
@@ -10,8 +14,8 @@ module.exports = {
         contentBase: './app',
     },
     // watch: true,
-    // mode: 'development',
     devtool: 'source-map',
+    mode: 'development',
     module: {
         rules: [{
                 test: /\m?.js$/,
@@ -24,13 +28,23 @@ module.exports = {
                 }
             },
             {
-                test: /\.s?css/,
+                test: /\.scss$/,
+                exclude: /node_modules/,
                 use: [
+                    MiniCssExtractPlugin.loader,
                     "style-loader",
                     "css-loader",
                     "sass-loader"
                 ]
-            }
+            },
+
+            plugins, [
+                new MiniCssExtractPlugin({
+
+                    filename: "[name].css",
+                    chunkFilename: "[id].css"
+                })
+            ]
         ]
     }
 

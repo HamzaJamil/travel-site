@@ -3,9 +3,15 @@
     top: 0;
     z-index: 2;
     width: 100%;
-    padding: 10px 0;
+    transition: all .3s ease-in-out;
+
+    &--expanded {
+        background-color: rgba($mainBlue, 0.55);
+
+    }
 
     @include respond(atMedium) {
+        padding: 10px 0;
         background-color: rgba($mainBlue, 0.3);
     }
 
@@ -29,9 +35,9 @@
     // header-menu-icon
     &__menu-icon {
         width: 20px;
-        height: 20px;
-        background-color: $colorWhite;
+        height: 19px;
         position: absolute;
+        z-index: 10;
         top: 10px;
         right: 10px;
         cursor: pointer;
@@ -39,32 +45,104 @@
         @include respond(atMedium) {
             display: none;
         }
+        &::before{
+            width: 20px;
+            height: 3px;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $colorWhite;
+            transform-origin: 0 0;
+            transition: all 0.2s ease-out;
+        }
+        &__middle-bar{
+            width: 20px;
+            height: 3px;
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 0;
+            background-color: $colorWhite;
+            transform-origin: 0 50%;
+            transition: all 0.2s ease-out;
+        }
+        &::after{
+            width: 20px;
+            height: 3px;
+            content: '';
+            position: absolute;
+            bottom : 0;
+            left: 0;
+            background-color: $colorWhite;
+            transform-origin: 0 100%;
+            transition: all 0.2s ease-out;
+        }
+    }
+    &__menu-icon--close-x{
+        &::before{
+            transform: rotate(45deg) scaleX(1.25);
+
+        }
+        .header__menu-icon__middle-bar{
+            opacity: 0;
+            transform: scale(0);
+        }
+        &::after{
+            transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+            
+        }
     }
 
-    // header-content-menu
-    &__content-menu {
-        display: none;
+    // header-menu-content
+    &__menu-content {
+        opacity: 0;
+        z-index: -10;
+        position: relative;
+        transform: scale(1.25);
+        transition: all .3s ease-out;
+        padding-top: 85px;
+        text-align: center;
 
         @include respond(atMedium) {
-            display: block;
+            padding-top: 0;
+            opacity: 1;
+            z-index: 1;
+            transform: scale(1);
         }
 
         &--visible {
-            display: block;
+            opacity: 1;
+            z-index: 1;
+            transform: scale(1);
+
+
         }
     }
 
 
     // header btn
     &___btn-container {
-        float: right;
+
+        @include respond(atMedium) {
+
+            float: right;
+        }
     }
 
     // primary-nav
     .primary-nav {
+        padding: 10px 0 10px;
+
+        @include respond(atMedium) {
+            padding: 0;
+        }
 
         &--pull-right {
-            float: right;
+
+            @include respond(atMedium) {
+                float: right;
+            }
         }
 
         ul {
@@ -75,16 +153,40 @@
 
         li {
             list-style: none;
-            float: left;
-            padding-right: 1rem;
+            display: inline-block;
+            padding-right: .4rem;
+
+            @include respond(atMedium) {
+                float: left;
+            }
+        }
+
+        li:last-child {
+            padding-right: 0;
+
+            @include respond(atMedium) {
+                padding-right: 1rem;
+            }
         }
 
         a {
             color: $colorWhite;
             text-decoration: none;
             font-weight: 300;
-            margin: 12px 0;
             display: block;
+            background-color: rgba($mainBlue, 1);
+            padding: 5px;
+            margin: 0 0 5px;
+            font-size: 0.8rem;
+
+            @include respond(atMedium) {
+                padding: 0;
+                font-size: 1rem;                
+                margin: 12px 0;
+                background-color: transparent;
+
+
+            }
         }
     }
 

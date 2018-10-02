@@ -1,4 +1,5 @@
 import $ from 'jquery'
+
 console.log('this is the person module')
 
 class Person {
@@ -16,7 +17,7 @@ class Person {
 }
 $('h1').on('click touch', function () {
     $('h1').remove()
-    console.log('Hi mai Mar gai :D')
+    console.log('H1 Heading removed ')
 })
 
 

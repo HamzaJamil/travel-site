@@ -623,9 +623,12 @@ strong {
   top: 0;
   z-index: 2;
   width: 100%;
-  padding: 10px 0; }
+  transition: all .3s ease-in-out; }
+  .header--expanded {
+    background-color: rgba(47, 85, 114, 0.55); }
   @media (min-width: 800px) {
     .header {
+      padding: 10px 0;
       background-color: rgba(47, 85, 114, 0.3); } }
   .header__logo {
     background-color: #2f5572;
@@ -641,40 +644,112 @@ strong {
         transform: translateX(0) scale(1); } }
   .header__menu-icon {
     width: 20px;
-    height: 20px;
-    background-color: #fff;
+    height: 19px;
     position: absolute;
+    z-index: 10;
     top: 10px;
     right: 10px;
     cursor: pointer; }
     @media (min-width: 800px) {
       .header__menu-icon {
         display: none; } }
-  .header__content-menu {
-    display: none; }
-    @media (min-width: 800px) {
-      .header__content-menu {
-        display: block; } }
-    .header__content-menu--visible {
-      display: block; }
-  .header___btn-container {
-    float: right; }
-  .header .primary-nav--pull-right {
-    float: right; }
-  .header .primary-nav ul {
-    padding: 0;
-    margin: 0; }
-    .header .primary-nav ul::after {
+    .header__menu-icon::before {
+      width: 20px;
+      height: 3px;
       content: '';
-      display: table;
-      clear: both; }
-  .header .primary-nav li {
-    list-style: none;
-    float: left;
-    padding-right: 1rem; }
-  .header .primary-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 300;
-    margin: 12px 0;
-    display: block; }
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      transform-origin: 0 0;
+      transition: all 0.2s ease-out; }
+    .header__menu-icon__middle-bar {
+      width: 20px;
+      height: 3px;
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 0;
+      background-color: #fff;
+      transform-origin: 0 50%;
+      transition: all 0.2s ease-out; }
+    .header__menu-icon::after {
+      width: 20px;
+      height: 3px;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #fff;
+      transform-origin: 0 100%;
+      transition: all 0.2s ease-out; }
+  .header__menu-icon--close-x::before {
+    transform: rotate(45deg) scaleX(1.25); }
+  .header__menu-icon--close-x .header__menu-icon__middle-bar {
+    opacity: 0;
+    transform: scale(0); }
+  .header__menu-icon--close-x::after {
+    transform: rotate(-45deg) scaleX(1.25) translateY(1px); }
+  .header__menu-content {
+    opacity: 0;
+    z-index: -10;
+    position: relative;
+    transform: scale(1.25);
+    transition: all .3s ease-out;
+    padding-top: 85px;
+    text-align: center; }
+    @media (min-width: 800px) {
+      .header__menu-content {
+        padding-top: 0;
+        opacity: 1;
+        z-index: 1;
+        transform: scale(1); } }
+    .header__menu-content--visible {
+      opacity: 1;
+      z-index: 1;
+      transform: scale(1); }
+  @media (min-width: 800px) {
+    .header___btn-container {
+      float: right; } }
+  .header .primary-nav {
+    padding: 10px 0 10px; }
+    @media (min-width: 800px) {
+      .header .primary-nav {
+        padding: 0; } }
+    @media (min-width: 800px) {
+      .header .primary-nav--pull-right {
+        float: right; } }
+    .header .primary-nav ul {
+      padding: 0;
+      margin: 0; }
+      .header .primary-nav ul::after {
+        content: '';
+        display: table;
+        clear: both; }
+    .header .primary-nav li {
+      list-style: none;
+      display: inline-block;
+      padding-right: .4rem; }
+      @media (min-width: 800px) {
+        .header .primary-nav li {
+          float: left; } }
+    .header .primary-nav li:last-child {
+      padding-right: 0; }
+      @media (min-width: 800px) {
+        .header .primary-nav li:last-child {
+          padding-right: 1rem; } }
+    .header .primary-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 300;
+      display: block;
+      background-color: #2f5572;
+      padding: 5px;
+      margin: 0 0 5px;
+      font-size: 0.8rem; }
+      @media (min-width: 800px) {
+        .header .primary-nav a {
+          padding: 0;
+          font-size: 1rem;
+          margin: 12px 0;
+          background-color: transparent; } }
