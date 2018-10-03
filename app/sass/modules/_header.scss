@@ -12,7 +12,14 @@
 
     @include respond(atMedium) {
         padding: 10px 0;
+        position: fixed;
         background-color: rgba($mainBlue, 0.3);
+
+        &--dark {
+            background-color: rgba($mainBlue, .9);
+            box-shadow: 3px 2px 5px rgba(#000, .5);
+            padding: 5px 0;
+        }
     }
 
     // header logo
@@ -24,10 +31,15 @@
         left: 50%;
         transform: translateX(-50%) scale(.8);
         transform-origin: 50% 0;
+        transition: all .3s ease-out;
 
         @include respond(atMedium) {
             left: auto;
             transform: translateX(0) scale(1);
+
+            .header--dark & {
+                transform: scale(.56);
+            }
 
         }
     }
@@ -45,7 +57,8 @@
         @include respond(atMedium) {
             display: none;
         }
-        &::before{
+
+        &::before {
             width: 20px;
             height: 3px;
             content: '';
@@ -56,7 +69,8 @@
             transform-origin: 0 0;
             transition: all 0.2s ease-out;
         }
-        &__middle-bar{
+
+        &__middle-bar {
             width: 20px;
             height: 3px;
             content: '';
@@ -67,30 +81,34 @@
             transform-origin: 0 50%;
             transition: all 0.2s ease-out;
         }
-        &::after{
+
+        &::after {
             width: 20px;
             height: 3px;
             content: '';
             position: absolute;
-            bottom : 0;
+            bottom: 0;
             left: 0;
             background-color: $colorWhite;
             transform-origin: 0 100%;
             transition: all 0.2s ease-out;
         }
     }
-    &__menu-icon--close-x{
-        &::before{
+
+    &__menu-icon--close-x {
+        &::before {
             transform: rotate(45deg) scaleX(1.25);
 
         }
-        .header__menu-icon__middle-bar{
+
+        .header__menu-icon__middle-bar {
             opacity: 0;
             transform: scale(0);
         }
-        &::after{
+
+        &::after {
             transform: rotate(-45deg) scaleX(1.25) translateY(1px);
-            
+
         }
     }
 
@@ -158,6 +176,8 @@
 
             @include respond(atMedium) {
                 float: left;
+                padding-right: 1rem;
+
             }
         }
 
@@ -181,9 +201,13 @@
 
             @include respond(atMedium) {
                 padding: 0;
-                font-size: 1rem;                
+                font-size: 1rem;
                 margin: 12px 0;
                 background-color: transparent;
+
+                &.is-current-link {
+                    color: $mainOrange;
+                }
 
 
             }

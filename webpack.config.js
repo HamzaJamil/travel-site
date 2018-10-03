@@ -9,7 +9,7 @@ module.exports = {
     devServer: {
         contentBase: './app',
     },
-    // watch: true,
+    watch: true,
     // mode: 'development',
     devtool: 'source-map',
     module: {
