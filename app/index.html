@@ -8,6 +8,7 @@
   <meta name="keywords" content="Travel planning, travel bundles, travel escapes, affordable travel">
   <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you.">
   <link rel="stylesheet" href="css/main.css" type="text/css">
+  <script src="js/Vendor.js"></script>
 </head>
 
 <body>
@@ -65,16 +66,17 @@
       <h3 class="headline headline--center headline--light headline--orange headline--small headline--narrow">Ever
         since, we&rsquo;ve been working to make travel <strong>better for everyone.</strong></h3>
       <div class="wrapper wrapper--medium wrapper--b-margin">
-        <img sizes="(min-width:970px) 976w , 100vw" srcset="images/first-trip-low-res-i.jpg 565w, images/first-trip-i.jpg 976w, images/first-trip-hi-dpi-i.jpg 1952w"
+        <img class="lazyload" sizes="(min-width:970px) 976w , 100vw" data-srcset="images/first-trip-low-res.jpg 565w, images/first-trip.jpg 976w, images/first-trip-hi-dpi.jpg 1952w"
           alt="Couple walking down a street.">
       </div>
       <div class="row row--gutters">
         <div class="col-medium-4 col-medium-4--larger u-margin-until-medium">
           <picture>
-            <source sizes="404px" srcset="images/our-start.jpg 404w, images/our-start-hi-dpi.jpg 808w" media="(min-width: 1020px)">
-            <source sizes="320px" srcset="images/our-start-portrait.jpg 382w, images/our-start-portrait-hi-dpi.jpg 764w"
+            <source sizes="404px" data-srcset="images/our-start.jpg 404w, images/our-start-hi-dpi.jpg 808w" media="(min-width: 1020px)">
+            <source sizes="320px" data-srcset="images/our-start-portrait.jpg 382w, images/our-start-portrait-hi-dpi.jpg 764w"
               media="(min-width: 800px)">
-            <img srcset="images/our-start-landscape.jpg 800w, images/our-start-landscape-hi-dpi.jpg 1600w" alt="Our founder, Jane Doe">
+            <img class="lazyload" data-srcset="images/our-start-landscape.jpg 800w, images/our-start-landscape-hi-dpi.jpg 1600w"
+              alt="Our founder, Jane Doe">
           </picture>
         </div>
         <div class="col-medium-8 col-medium-8--smaller ">
@@ -118,7 +120,7 @@
       <div class="row row--gutters-large generic-content-container">
         <div class="col-medium-6">
           <div class="feature-item">
-            <img class="feature-item__icon" src="images/icons/rain.svg">
+            <img class="feature-item__icon lazyload" data-src="images/icons/rain.svg">
             <h3 class="feature-item__title">Watch the Weather</h3>
             <p>Download our app and we&rsquo;ll send you a notice if it&rsquo;s about to rain in the next 20 minutes
               around
@@ -127,7 +129,7 @@
           </div>
 
           <div class="feature-item">
-            <img class="feature-item__icon" src="images/icons/globe.svg">
+            <img class="feature-item__icon lazyload" data-src="images/icons/globe.svg">
             <h3 class="feature-item__title">Global Guides</h3>
             <p>We&rsquo;ve scoured the entire planet for the best retreats and beautiful vistas. If there&rsquo;s a
               corner of
@@ -138,7 +140,7 @@
 
         <div class="col-medium-6">
           <div class="feature-item">
-            <img class="feature-item__icon" src="images/icons/wifi.svg">
+            <img class="feature-item__icon lazyload" data-src="images/icons/wifi.svg">
             <h3 class="feature-item__title">Wi-Fi Waypoints</h3>
             <p>We only send you on trips to places we can personally vouch for as being amazing. Which means
               we&rsquo;ve mapped
@@ -147,7 +149,7 @@
           </div>
 
           <div class="feature-item">
-            <img class="feature-item__icon" src="images/icons/fire.svg">
+            <img class="feature-item__icon lazyload" data-src="images/icons/fire.svg">
             <h3 class="feature-item__title">Survival Kit</h3>
             <p>Everytime you book an escape with us we send you a survival kit with the finest materials. The kit will
               allow
@@ -160,10 +162,10 @@
     </div>
   </div>
 
-  <div id="testimonials" class="page-section page-section--bg" data-matching-link="#testimonials-link">
+  <div id="testimonials" class="page-section page-section--bg lazyload" data-matching-link="#testimonials-link">
     <div class="wrapper">
       <h2 class="section-title section-title--blue">
-        <img class="section-title__icon" src="images/icons/comment.svg">
+        <img class="section-title__icon lazyload" data-src="images/icons/comment.svg">
         Real <strong>Testimonials</strong>
       </h2>
 
@@ -171,7 +173,7 @@
         <div class="col-large-4">
           <div class="testimonial">
             <div class="testimonial__icon">
-              <img sizes="160px" srcset="images/testimonial-jane.jpg 160w, images/testimonial-jane-hi-dpi.jpg 320w">
+              <img class="lazyload" sizes="160px" data-srcset="images/testimonial-jane.jpg 160w, images/testimonial-jane-hi-dpi.jpg 320w">
             </div>
             <h3 class="testimonial__title">Jane Doe</h3>
             <h4 class="testimonial__subtitle">9 Time Escaper</h4>
@@ -186,7 +188,7 @@
         <div class="col-large-4">
           <div class="testimonial">
             <div class="testimonial__icon">
-              <img sizes="160px" srcset="images/testimonial-john.jpg 160w, images/testimonial-john-hi-dpi.jpg 320w">
+              <img class="lazyload" sizes="160px" data-srcset="images/testimonial-john.jpg 160w, images/testimonial-john-hi-dpi.jpg 320w">
             </div>
             <h3 class="testimonial__title">John Smith</h3>
             <h4 class="testimonial__subtitle">4 Time Escaper</h4>
@@ -204,7 +206,7 @@
         <div class="col-large-4">
           <div class="testimonial">
             <div class="testimonial__icon">
-              <img sizes="160px" srcset="images/testimonial-cat.jpg 160w, images/testimonial-cat-hi-dpi.jpg 320w">
+              <img class="lazyload" sizes="160px" data-srcset="images/testimonial-cat.jpg 160w, images/testimonial-cat-hi-dpi.jpg 320w">
             </div>
             <h3 class="testimonial__title">Cat McKitty</h3>
             <h4 class="testimonial__subtitle">6 Time Escaper</h4>
@@ -233,7 +235,7 @@
     <div class="modal-box__inner">
       <div class="wrapper wrapper--medium">
         <h2 class="section-title section-title--blue">
-          <img class="section-title__icon" src="images/icons/mail.svg">
+          <img class="section-title__icon lazyload" data-src="images/icons/mail.svg">
           Get in <strong>Touch</strong>
         </h2>
         <p class="modal-box__description">We will have an online order system in place soon. until then, connect with
@@ -241,10 +243,10 @@
           on any of the platforms below!</p>
 
         <div class="social-icons">
-          <a href="#" class="social-icons__icon"><img src="./images/icons/facebook.svg" alt="social-icons"></a>
-          <a href="#" class="social-icons__icon"><img src="./images/icons/instagram.svg" alt="social-icons"></a>
-          <a href="#" class="social-icons__icon"><img src="./images/icons/twitter.svg" alt="social-icons"></a>
-          <a href="#" class="social-icons__icon"><img src="./images/icons/youtube.svg" alt="social-icons"></a>
+          <a href="#" class="social-icons__icon"><img class="lazyload" data-src="./images/icons/facebook.svg" alt="social-icons"></a>
+          <a href="#" class="social-icons__icon"><img class="lazyload" data-src="./images/icons/instagram.svg" alt="social-icons"></a>
+          <a href="#" class="social-icons__icon"><img class="lazyload" data-src="./images/icons/twitter.svg" alt="social-icons"></a>
+          <a href="#" class="social-icons__icon"><img class="lazyload" data-src="./images/icons/youtube.svg" alt="social-icons"></a>
         </div>
       </div>
     </div>
@@ -253,7 +255,7 @@
     </div>
   </div>
   <!-- <script src="./scripts/modules/jquery.js"></script> -->
-  <script src="./js/bundle.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>
