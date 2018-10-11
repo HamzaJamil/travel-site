@@ -8,9 +8,10 @@
         max-width: 780px;
     }
 
-    &--b-margin{
+    &--b-margin {
         margin-bottom: 1rem;
-        @include respond(atMedium){
+
+        @include respond(atMedium) {
             margin-bottom: 3.5rem;
         }
     }
@@ -24,70 +25,74 @@
 
 .row {
     @include clearfix;
-    
-    &--gutters{
+
+    &--gutters {
         margin-right: -50px;
 
     }
 
-    &--gutters-large{
+    &--gutters-large {
         margin-right: -100px;
     }
 
-    &--gutters > div {
+    &--gutters>div {
         padding-right: 50px;
     }
 
-    &--gutters-large > div{
+    &--gutters-large>div {
         padding-right: 100px;
     }
-    
+
     .col-medium-4 {
-        @include respond(atMedium){
+        @include respond(atMedium) {
             float: left;
             width: 33.33%;
         }
+
         &--larger {
             @include respond(atMedium) {
                 width: 37%;
             }
         }
     }
+
     .col-large-4 {
         @include respond(atLarge) {
             float: left;
             width: 33.33%;
         }
     }
-    .col-medium-6{
+
+    .col-medium-6 {
         @include respond(atMedium) {
             float: left;
             width: 50%;
         }
     }
-    
 
-    .col-medium-8 {        
+
+    .col-medium-8 {
         @include respond(atMedium) {
             float: left;
             width: 66.66%;
         }
 
-        &--smaller{
+        &--smaller {
             @include respond(atMedium) {
                 width: 63%;
             }
         }
     }
+
     /* Equal height at medium */
-    &--same-height-at-medium{
-        @include respond(atLarge){
+    &--same-height-at-medium {
+        @include respond(atLarge) {
             display: flex;
         }
 
-        & > div{
+        &>div {
 
-            @include respond(atLarge){
+            @include respond(atLarge) {
                 display: flex;
                 float: none;
             }
@@ -117,13 +122,15 @@
         color: #ffffff;
     }
 
-    &--bg{
+    &--bg {
 
         background-color: #e0e6ef;
 
-        @include respond(atLarge){
-            background: url(../images/testimonials-bg.jpg) no-repeat top center;
-            background-size: cover;
+        @include respond(atLarge) {
+            &.lazyloaded {
+                background: url(../images/testimonials-bg.jpg) no-repeat top center;
+                background-size: cover;
+            }
         }
     }
 }

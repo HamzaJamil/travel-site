@@ -1,10 +1,13 @@
 var path = require('path');
 
 module.exports = {
-    entry: ['./app/src/index.js'],
+    entry: {
+        index: './app/src/index.js',
+        vendor: './app/src/vendor.js'
+    },
     output: {
-        path: path.resolve(__dirname, 'app'),
-        filename: 'js/bundle.js'
+        path: path.resolve(__dirname, 'app/js'),
+        filename: '[name].js'
     },
     devServer: {
         contentBase: './app',

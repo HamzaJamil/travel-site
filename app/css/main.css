@@ -428,7 +428,7 @@ a {
   .page-section--bg {
     background-color: #e0e6ef; }
     @media (min-width: 1010px) {
-      .page-section--bg {
+      .page-section--bg.lazyloaded {
         background: url(../images/testimonials-bg.jpg) no-repeat top center;
         background-size: cover; } }
 
