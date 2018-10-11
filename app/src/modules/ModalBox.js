@@ -15,6 +15,9 @@ class ModalBox {
 
         // close the modal-box
         this.closeModalBtn.click(this.closeModal.bind(this));
+
+        //Push any key to close modal-box
+        $(document).keyup(this.keyPressHandler.bind(this))
     }
 
     openModal() {
@@ -25,6 +28,12 @@ class ModalBox {
     closeModal() {
         this.modalBox.removeClass('modal-box--visible');
 
+    }
+
+    keyPressHandler(e) {
+        if (e.keyCode == 27) {
+            this.closeModal()
+        }
     }
 
 
