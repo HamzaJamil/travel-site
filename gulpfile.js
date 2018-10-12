@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var reload = browserSync.reload;
+require('./gulpTask/build');
 
 var src = {
     scss: 'app/sass/**/*.scss',

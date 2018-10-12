@@ -12,6 +12,16 @@ class StickyHeader {
         this.headerWaypoint()
         this.pageSectionWaypoint()
         this.addSmoothScrolling()
+
+        // for waypoint refresh
+        this.lazyIamges = $('.lazyload')
+        this.waypointRefresh()
+    }
+
+    waypointRefresh() {
+        this.lazyIamges.on('load', function () {
+            Waypoint.refreshAll()
+        })
     }
 
     addSmoothScrolling() {
